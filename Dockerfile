@@ -31,5 +31,5 @@ USER sepid
 EXPOSE 8000
 
 # run entrypoint.prod.sh
-ENTRYPOINT ["python", "mysite/manage.py"]
+ENTRYPOINT ["python", "app/manage.py"]
 CMD ["runserver", "0.0.0.0:8000"]
