@@ -1,5 +1,6 @@
 import os
 
+
 def get_environment_var(var_name, default, prefixed=True):
     if prefixed:
         var_name = 'SEIPID_CORRECTOR_%s' % var_name
@@ -28,6 +29,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'django_filters',
     'corrector.apps.CorrectorConfig',
+    'apps.multichoice_corrector',
 ]
 
 MIDDLEWARE = [

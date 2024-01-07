@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import permissions
@@ -30,6 +30,7 @@ if not settings.DEBUG:
 
 urlpatterns = [
     path('api/admin/', admin.site.urls),
+    path('api/multichoice_corrector/', include('apps.multichoice_corrector.urls')),
 ]
 
 urlpatterns += [path('api/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
