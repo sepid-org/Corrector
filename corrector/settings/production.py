@@ -10,20 +10,10 @@ ALLOWED_HOSTS = get_environment_var('ALLOWED_HOSTS', '*').split(',')
 
 SERVICE_DOMAIN = 'https://corrector.sepid.org/'
 
-DB_NAME = get_environment_var('DB_NAME', 'workshop')
-DB_USER = get_environment_var('DB_USER', 'user')
-DB_PASS = get_environment_var('DB_PASS', 'p4s$pAsS')
-DB_HOST = get_environment_var('DB_HOST', 'localhost')
-DB_PORT = get_environment_var('DB_PORT', '5432')
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': DB_NAME,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASS,
-        'HOST': DB_HOST,
-        'PORT': DB_PORT,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -73,7 +63,6 @@ LOGGING = {
 }
 
 TESTING = False
-
 
 SWAGGER_URL = f'{SERVICE_DOMAIN}api/'
 
