@@ -11,15 +11,10 @@ COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
-# copy entrypoint-prod.sh
-COPY ./entrypoint.prod.sh /app/entrypoint.prod.sh
-
 # copy project
 COPY . /usr/src/app/
 
 RUN adduser sepid
-
-
 
 RUN mkdir -p /app/logging && chown -R sepid /app/logging \
 	&& mkdir -p /app/media && chown -R sepid /app/media
