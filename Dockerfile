@@ -12,14 +12,14 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # copy project
-COPY . /usr/src/app/
+COPY . /app/
 
 RUN adduser sepid
 
 RUN mkdir -p /app/logging && chown -R sepid /app/logging \
 	&& mkdir -p /app/media && chown -R sepid /app/media
 
-RUN chown -R sepid /usr/src/app/
+RUN chown -R sepid /app/
 
 USER sepid
 
