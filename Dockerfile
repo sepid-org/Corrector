@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.7
+FROM python:3.9
 
 # set work directory
 WORKDIR /app
@@ -18,6 +18,8 @@ COPY ./entrypoint.prod.sh /app/entrypoint.prod.sh
 COPY . /usr/src/app/
 
 RUN adduser sepid
+
+
 
 RUN mkdir -p /app/logging && chown -R sepid /app/logging \
 	&& mkdir -p /app/media && chown -R sepid /app/media
