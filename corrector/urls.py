@@ -30,7 +30,7 @@ if not settings.DEBUG:
 
 urlpatterns = [
     path('api/admin/', admin.site.urls),
-    path('api/multichoice_corrector/', include('apps.multichoice_corrector.urls')),
+    path('api/corrector/', include('apps.multichoice_corrector.urls')),
 ]
 
 urlpatterns += [path('api/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
