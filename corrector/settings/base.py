@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'django_filters',
     'corrector.apps.CorrectorConfig',
-    'apps.multichoice_corrector',
+    'apps.base_corrector',
 ]
 
 MIDDLEWARE = [
