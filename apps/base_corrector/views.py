@@ -17,8 +17,6 @@ def correct(request):
     correct_answer_text = correct_answer.get('text')
     given_answer_text = given_answer.get('text')
 
-    print(correct_answer_text, given_answer_text)
-
     if correct_answer_type == 'SmallAnswer':
         if correct_answer_text == given_answer_text:
             correctness_percentage = 100
