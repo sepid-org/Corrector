@@ -66,5 +66,4 @@ TESTING = False
 
 SWAGGER_URL = f'{SERVICE_DOMAIN}api/'
 
-CSRF_TRUSTED_ORIGINS = get_environment_var(
-    'CSRF_TRUSTED_ORIGINS', '*').split(',')
+CSRF_TRUSTED_ORIGINS = get_environment_var('CSRF_TRUSTED_ORIGINS').split(',')
