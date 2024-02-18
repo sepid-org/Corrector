@@ -8,7 +8,7 @@ SECRET_KEY = get_environment_var(
 
 ALLOWED_HOSTS = get_environment_var('ALLOWED_HOSTS', '*').split(',')
 
-SERVICE_DOMAIN = 'https://corrector.sepid.org/'
+SERVICE_DOMAIN = 'https://cas.sepid.org/'
 
 DATABASES = {
     'default': {
@@ -62,7 +62,7 @@ LOGGING = {
     },
 }
 
-TESTING = False
+TESTING = get_environment_var('TESTING', 'False') == 'True'
 
 SWAGGER_URL = f'{SERVICE_DOMAIN}api/'
 
