@@ -1,7 +1,7 @@
 import os
 
 
-def get_environment_var(var_name, default, prefixed=True):
+def get_environment_var(var_name, default=None, prefixed=True):
     if prefixed:
         var_name = 'SEIPID_CORRECTOR_%s' % var_name
     return os.getenv(var_name, default)
